@@ -1072,7 +1072,7 @@ border-radius: 30px;
         justify-content: flex-end;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 .slider-wrapper .slide {
         height: auto;
     }
