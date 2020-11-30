@@ -66,6 +66,15 @@ let Song;
 let v;
 let min;
 let sec;
+menuHamburger = document.querySelector('.menu-hamburger');
+mobileMenu = document.querySelector('.mobile-menu');
+menuHamburger.addEventListener('click', burgerFunction);
+function burgerFunction() {
+    menuHamburger.querySelector('.menu-hamburger__top-line').classList.toggle('menu-hamburger__top-line_active');
+    menuHamburger.querySelector('.menu-hamburger__second-line').classList.toggle('menu-hamburger__second-line_active');
+    menuHamburger.querySelector('.menu-hamburger__third-line').classList.toggle('menu-hamburger__third-line_active');
+    mobileMenu.classList.toggle('mobile-menu_active');
+}
 progressBar = document.querySelector('.progress-bar');
 progressWrap = document.querySelector('.progress-wrap');
 resetBtn = document.querySelector('.player__resetbtn');
