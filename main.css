@@ -34,6 +34,40 @@
 .header__link:hover {
     color:#C69C6D;
 }
+.menu-hamburger {
+    display: none;
+}
+.menu-hamburger__lines {
+    position: relative;
+    width: 25px;
+    height: 4px;
+    background-color: #C69C6D;
+    margin-bottom: 3px;
+    transition: .5s;
+}
+.menu-hamburger__top-line_active {
+    transform: rotate(45deg);
+    top: 4px;
+}
+.menu-hamburger__second-line_active {
+    display: none;
+}
+.menu-hamburger__third-line_active {
+    transform: rotate(-45deg);
+    bottom: 3px;
+}
+.mobile-menu {
+    display: none;
+}
+.mobile-menu_active {
+    display: none
+}
+.mobile_lists {
+    list-style-type: none;
+}
+.header__icons-margin {
+    margin-left: 40px;
+}
 .story__title {
     font-family: "Rouge Script", cursive;
     font-size: 42px;
@@ -1006,6 +1040,14 @@ border-radius: 30px;
 @media screen and (max-width: 992px) {
     .header__nav-menu {
         display: none;
+    }
+    .menu-hamburger {
+        display: block;
+        margin-left: auto;
+    }
+    .mobile-menu_active {
+        display: block;
+        height: 200px;
     }
     .box-wedding__people-img {
         width: 200px;
