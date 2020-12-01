@@ -111,7 +111,7 @@ body {
     padding-right: 10px;
 }
 .love-story {
-    background-image: url('../story_bg2.jpg');
+    background-image: url('story_bg2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -229,14 +229,14 @@ body {
     margin-left: 10px
 }
 .play {
-    background-image: url('../imgplay.png');
+    background-image: url('imgplay.png');
     background-size: cover;
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
 .pause {
-    background-image: url('../imgpause.png');
+    background-image: url('imgpause.png');
     background-size: cover;
     width: 40px;
     height: 40px;
@@ -470,7 +470,7 @@ font-size: 3.571em;
     position: relative;
     background-color: rgba(34, 34, 34, 0.1);
     margin-bottom: 30px;
-    background-image: url('../event-img-1.jpg');
+    background-image: url('event-img-1.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -478,7 +478,7 @@ font-size: 3.571em;
     position: relative;
     background-color: rgba(34, 34, 34, 0.1);
     margin-bottom: 30px;
-    background-image: url('../event-img-2.jpg');
+    background-image: url('event-img-2.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -557,7 +557,7 @@ font-size: 3.571em;
     background-color: #C69C6D;
 }
 .attending {
-    background-image: url('../atteding.jpg');
+    background-image: url('atteding.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -673,7 +673,7 @@ font-size: 3.571em;
     margin-bottom: 20px;
 }
 .rsvp {
-    background-image: url('../story_bg.jpg');
+    background-image: url('story_bg.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -778,7 +778,7 @@ font-size: 3.571em;
     height: auto;
 }
 .dont-miss {
-    background-image: url('../dont-miss-it.jpg');
+    background-image: url('dont-miss-it.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -899,14 +899,14 @@ font-size: 3.571em;
 }
 .slider-wrapper .arrow-next{
     right: 0;
-    background-image: url('../ic_arrow_back_128_28227.png');
+    background-image: url('ic_arrow_back_128_28227.png');
     background-size: cover;
     width: 30px;
     height: 30px;
 }
 .slider-wrapper .arrow-prev{
     left: 0;
-    background-image: url('../ic_arrow_back_128_28226.png');
+    background-image: url('ic_arrow_back_128_28226.png');
     background-size: cover;
     width: 30px;
     height: 30px;
@@ -932,7 +932,7 @@ font-size: 3.571em;
     margin: 0 0 20px 0;
 }
 .friends {
-    background-image: url('../place.jpg');
+    background-image: url('place.jpg');
     background-size: cover;
     background-position: center;
 }
