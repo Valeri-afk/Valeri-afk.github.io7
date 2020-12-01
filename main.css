@@ -429,7 +429,7 @@ body {
     margin: 0 20px 0 20px;
 }
 .section {
-    background-image: url('../queto.jpg');
+    background-image: url('queto.jpg');
     background-size: cover;
     background-position: center;
 }
