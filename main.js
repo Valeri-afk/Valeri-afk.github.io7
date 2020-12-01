@@ -76,7 +76,7 @@ function burgerFunction() {
     mobileMenu.classList.toggle('mobile-menu_active');
 }
 progressBar = document.querySelector('.progress-bar');
-progressWrap = document.querySelector('.progress-wrap');
+progress = document.querySelector('.progress');
 resetBtn = document.querySelector('.player__resetbtn');
 stopBtn = document.querySelector('.player__stopbtn');
 durationTime = document.querySelector('.duration-time');
@@ -103,10 +103,10 @@ function playOrPause() {
         sec = parseInt(2631.549388%60);
         Song = new Audio('bugle-128.mp3');
             Song.volume = playerVolume.value/100;
+            progressBar.value = 0;
         Song.play();
         Song.addEventListener('timeupdate', timeUpdateFunction);
         function timeUpdateFunction() {
-            progressBar.style.right = (100 - Song.currentTime/26.31549388) + '%';
             durationTime.innerHTML = min + ':' + (sec - v);
             if((sec - v) < 10) {
                 durationTime.innerHTML = min + ':' + '0' + (sec - v);
@@ -160,11 +160,11 @@ function resetFunction() {
         clearInterval(g);
         Song = new Audio('bugle-128.mp3');
         playerVolume.value = 50;
+        progressBar.value = 0;
             Song.volume = playerVolume.value/100;
         Song.play();
         Song.addEventListener('timeupdate', timeUpdateFunction);
         function timeUpdateFunction() {
-            progressBar.style.right = (100 - Song.currentTime/26.31549388) + '%';
             durationTime.innerHTML = min + ':' + (sec - v);
             if((sec - v) < 10) {
                 durationTime.innerHTML = min + ':' + '0' + (sec - v);
@@ -207,7 +207,7 @@ stopBtn.addEventListener('click',stopFunction);
         if(Song) {
             playerVolume.value = 50;
             Song.volume = playerVolume.value/100;
-            progressBar.style.right = 100 + '%';
+            progressBar.value = 0;
             v = 0;
             min = parseInt(2631.549388/60);
             sec = parseInt(2631.549388%60);
@@ -218,17 +218,17 @@ stopBtn.addEventListener('click',stopFunction);
                 durationTime.innerHTML = min + ':' + sec;
         }
     }
-
-    progressWrap.addEventListener('click', progressBarCurrentTime);
-    function progressBarCurrentTime(event) {
-        Song.currentTime = ((event.clientX - 597)/(6.62/26.31549388));
+    
+    
+    progressBar.addEventListener('input', progressBarCurrentTime);
+    function progressBarCurrentTime() {
+        Song.currentTime = (progressBar.value/(2.42/26.31549388))
             min = parseInt((2631.549388 - Song.currentTime)/60);
             sec = parseInt((2631.549388 - Song.currentTime)%60);
             if((sec - v) < 0 || (sec - v) == 0) {
                 if(min == 0) {
                     sec = 0;
                     v = 0;
-                    progressBar.style.right = 0 + '%';
                     playBtn.classList.toggle('pause');
                     Song.pause();
                    Song = '';
@@ -240,7 +240,6 @@ stopBtn.addEventListener('click',stopFunction);
                 }
             }
     }
-    
 
 galleryBackground = document.querySelectorAll('.gallery-background');
 for(i=0; i<galleryBackground.length; i++) {
