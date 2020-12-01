@@ -101,7 +101,7 @@ function playOrPause() {
         v = 1;
         min = parseInt(2631.549388/60);
         sec = parseInt(2631.549388%60);
-        Song = new Audio('bugle-128.mp3');
+        Song = new Audio('bugle-127.mp3');
             Song.volume = playerVolume.value/100;
             progressBar.value = 0;
         Song.play();
@@ -158,7 +158,7 @@ function resetFunction() {
         Song.pause();
         Song = '';
         clearInterval(g);
-        Song = new Audio('bugle-128.mp3');
+        Song = new Audio('bugle-127.mp3');
         playerVolume.value = 50;
         progressBar.value = 0;
             Song.volume = playerVolume.value/100;
