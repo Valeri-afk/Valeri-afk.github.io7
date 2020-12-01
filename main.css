@@ -1,4 +1,8 @@
 @import 'grid.css';
+body {
+    min-width: 320px;
+    max-width: 1920px;
+}
 .content-wrap {
     padding: 100px 0;
 }
@@ -107,7 +111,7 @@
     padding-right: 10px;
 }
 .love-story {
-    background-image: url('story_bg2.jpg');
+    background-image: url('../story_bg2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -197,33 +201,42 @@
     outline: none;
     border-radius: 10px;
 }
-.progress-wrap {
-    position: relative;
-    flex-grow: 1;
-    height: 10px;
-    border: 1px solid black;
-    overflow: hidden;
-}
 .progress-bar {
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    position: absolute;
-    right: 100%;
+    -webkit-appearance: none;
+    flex-grow: 1;
+    height: 20px;
+    overflow: hidden;
+    max-width: 242px;
 }
+.progress-bar::-webkit-slider-runnable-track {
+    border-radius: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    background-color: #ccc;
+    }
+    .progress-bar::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-color: #000;
+        border: 3px solid #0b6b00;
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: -5px;
+        }
 .duration-time {
     margin-block-end: 0; 
     margin-left: 10px
 }
 .play {
-    background-image: url('imgplay.png');
+    background-image: url('../imgplay.png');
     background-size: cover;
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
 .pause {
-    background-image: url('imgpause.png');
+    background-image: url('../imgpause.png');
     background-size: cover;
     width: 40px;
     height: 40px;
@@ -416,7 +429,7 @@
     margin: 0 20px 0 20px;
 }
 .section {
-    background-image: url('queto.jpg');
+    background-image: url('../queto.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -457,7 +470,7 @@ font-size: 3.571em;
     position: relative;
     background-color: rgba(34, 34, 34, 0.1);
     margin-bottom: 30px;
-    background-image: url('event-img-1.jpg');
+    background-image: url('../event-img-1.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -465,7 +478,7 @@ font-size: 3.571em;
     position: relative;
     background-color: rgba(34, 34, 34, 0.1);
     margin-bottom: 30px;
-    background-image: url('event-img-2.jpg');
+    background-image: url('../event-img-2.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -544,7 +557,7 @@ font-size: 3.571em;
     background-color: #C69C6D;
 }
 .attending {
-    background-image: url('atteding.jpg');
+    background-image: url('../atteding.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -660,7 +673,7 @@ font-size: 3.571em;
     margin-bottom: 20px;
 }
 .rsvp {
-    background-image: url('story_bg.jpg');
+    background-image: url('../story_bg.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -765,7 +778,7 @@ font-size: 3.571em;
     height: auto;
 }
 .dont-miss {
-    background-image: url('dont-miss-it.jpg');
+    background-image: url('../dont-miss-it.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -886,14 +899,14 @@ font-size: 3.571em;
 }
 .slider-wrapper .arrow-next{
     right: 0;
-    background-image: url('ic_arrow_back_128_28227.png');
+    background-image: url('../ic_arrow_back_128_28227.png');
     background-size: cover;
     width: 30px;
     height: 30px;
 }
 .slider-wrapper .arrow-prev{
     left: 0;
-    background-image: url('ic_arrow_back_128_28226.png');
+    background-image: url('../ic_arrow_back_128_28226.png');
     background-size: cover;
     width: 30px;
     height: 30px;
@@ -919,7 +932,7 @@ font-size: 3.571em;
     margin: 0 0 20px 0;
 }
 .friends {
-    background-image: url('place.jpg');
+    background-image: url('../place.jpg');
     background-size: cover;
     background-position: center;
 }
@@ -1018,6 +1031,11 @@ border-radius: 30px;
 .friends-dot:hover {
     background-color: #C69C6D;
 }
+@media screen and (min-width: 1920px) {
+    body {
+        margin: 0px auto;
+    }
+}
 @media screen and (min-width: 992px) and (max-width: 1200px) {
     .box-wedding__people-img {
         width: 200px;
@@ -1038,9 +1056,6 @@ border-radius: 30px;
     }
 }
 @media screen and (max-width: 992px) {
-    .header__nav-menu {
-        display: none;
-    }
     .menu-hamburger {
         display: block;
         margin-left: auto;
@@ -1048,6 +1063,9 @@ border-radius: 30px;
     .mobile-menu_active {
         display: block;
         height: 200px;
+    }
+    .header__nav-menu {
+        display: none;
     }
     .box-wedding__people-img {
         width: 200px;
